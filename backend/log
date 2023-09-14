@@ -1,0 +1,56 @@
+{
+
+  "0":{"NIK":"6171046407660006","Status":"Data Tidak Ditemukan, NIK tidak terdapat di database Kependudukan"},
+  "1":{"NIK":"6171045405870018","Status":"NIK Sesuai"},
+  "2":{"NIK":"6171044610130001","Status":"NIK Sesuai"},
+  "3":{"NIK":"3324201209850001","Status":"NIK Sesuai"},
+  "4":{"NIK":"3324085206860002","Status":"NIK Sesuai"},
+  "Total Execution Time":"13.603877067566 detik"
+}
+{
+  "0":{"NIK":"3324080401810002","Status":"NIK Sesuai"},
+  "1":{"NIK":"3324204307860001","Status":"NIK Sesuai"},
+  "2":{"NIK":"3324206105220002","Status":"NIK Sesuai"},
+  "3":{"NIK":"3324080402550001","Status":"NIK Sesuai"},
+  "4":{"NIK":"3324084605630001","Status":"NIK Sesuai"},
+  "5":{"NIK":"3324081801950001","Status":"Data Ditemukan, Meninggal Dunia"},
+  "6":{"NIK":"3324081212620002","Status":"NIK Sesuai"},
+  "7":{"NIK":"3324086404740003","Status":"NIK Sesuai"},
+  "8":{"NIK":"3324081509050001","Status":"NIK Sesuai"},
+  "9":{"NIK":"3324205307170004","Status":"NIK Sesuai"},
+  "10":{"NIK":"3324201103600001","Status":"NIK Sesuai"},
+  "11":{"NIK":"3324204101650001","Status":"NIK Sesuai"},
+  "12":{"NIK":"3506132219950003","Status":"Data Tidak Ditemukan, NIK tidak terdapat di database Kependudukan"},
+  "13":{"NIK":"3324204607860001","Status":"NIK Sesuai"},
+  "14":{"NIK":"3324204907120001","Status":"NIK Sesuai"},
+  "15":{"NIK":"3324207092000022","Status":"Data Tidak Ditemukan, NIK tidak terdapat di database Kependudukan"},
+  "16":{"NIK":"3324201512770001","Status":"NIK Sesuai"},
+  "17":{"NIK":"3324204404800001","Status":"NIK Sesuai"},
+  "18":{"NIK":"3324200109080001","Status":"NIK Sesuai"},
+  "19":{"NIK":"3324201912130002","Status":"NIK Sesuai"},
+  "Total Execution Time":"52.072209835052 detik"
+}
+{
+  "0":{"NIK":"6171044501770011","Status":"NIK Sesuai"},
+  "1":{"NIK":"6171044406420001","Status":"NIK Sesuai"},
+  "2":{"NIK":"6171042106690001","Status":"NIK Sesuai"},
+  "3":{"NIK":"6171040912730003","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "4":{"NIK":"6171043001800003","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "5":{"NIK":"6171040304820004","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "6":{"NIK":"6109015505930005","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "7":{"NIK":"6171040510140002","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "8":{"NIK":"6171040901190001","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "9":{"NIK":"6171040402220002","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "10":{"NIK":"6171043006570008","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "11":{"NIK":"6171046601660004","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "12":{"NIK":"6171044904820019","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "13":{"NIK":"6171046711830006","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "14":{"NIK":"6171041907940006","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "15":{"NIK":"6171041407010007","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "16":{"NIK":"6171040603690010","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "17":{"NIK":"6171045003710008","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "18":{"NIK":"6171041609990006","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "19":{"NIK":"6171044512030004","Status":"Kuota Akses Hari Ini Telah Habis"},
+  "Total Execution Time":"14.046836853027 detik"
+}
+
