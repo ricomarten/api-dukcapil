@@ -125,7 +125,7 @@ $(function () {
   });
   $("#loginForm").validate({
     rules: {
-      email: {
+      user: {
         required: true,
         email: true,
       },
