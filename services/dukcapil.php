@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $headers = getallheaders();
 if (!isset($headers['Authorization'])) {
   http_response_code(401);
+  echo json_encode(["content"=>array(["RESPONSE"=> "Login salah"])]);
   exit();
 }
 
@@ -29,11 +30,9 @@ function ekstrak_nilai($string)
   $nilai = str_replace(")", "", $nilai_all[1]);
   return $nilai;
 }
-// Ambil JSON yang dikirim oleh user
 $json = file_get_contents('php://input');
-// Decode json tersebut agar mudah mengambil nilainya
 $input = json_decode($json);
-//print_r($input);
+
 if (!isset($input->NIK) || ($input->NIK == '')) {
   http_response_code(400);
   echo json_encode(["content"=>array(["RESPONSE"=> "NIK Tidak Boleh Kosong"])]);
