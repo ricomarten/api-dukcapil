@@ -86,7 +86,7 @@ try {
   $hasil = json_decode($result);
 
   $content = json_decode(json_encode($hasil->content[0]), true);
-  print_r($content);
+  echo json_encode($hasil);
   if (array_key_exists("RESPONSE_CODE", $content)) {
     //"Key exists!";
     $status = $content['RESPONSE_CODE'];
@@ -94,7 +94,7 @@ try {
     // "Key does not exist!";
     $status = "NIK Sesuai";
 
-    echo ekstrak_nilai($content['NAMA_LGKP']);
+    //echo ekstrak_nilai($content['NAMA_LGKP']);
   }
   echo $status;
   //echo json_encode($games);
