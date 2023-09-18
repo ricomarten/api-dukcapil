@@ -36,7 +36,7 @@ $input = json_decode($json);
 //print_r($input);
 if (!isset($input->NIK) || ($input->NIK == '')) {
   http_response_code(400);
-  echo json_encode("NIK Tidak Boleh Kosong");
+  echo json_encode(["content"=>["RESPONSE"=> "NIK Tidak Boleh Kosong"]]);
   exit();
 }
 try {
