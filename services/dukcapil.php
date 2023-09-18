@@ -36,7 +36,7 @@ $input = json_decode($json);
 //print_r($input);
 if (!isset($input->NIK) || ($input->NIK == '')) {
   http_response_code(400);
-  echo json_encode(["content"=>["RESPONSE"=> "NIK Tidak Boleh Kosong"]]);
+  echo json_encode(["content"=>array(["RESPONSE"=> "NIK Tidak Boleh Kosong"])]);
   exit();
 }
 try {
@@ -63,8 +63,8 @@ try {
     "NO_KEL"    => $input->NO_KEL,
     "KEL_NAME"  => $input->KEL_NAME,
     "ALAMAT"    => $input->ALAMAT,
-    "NO_RT"     => $input->NIK,
-    "NO_RW"     => $input->NIK
+    "NO_RT"     => $input->NO_RT,
+    "NO_RW"     => $input->NO_RW
   );
 
   $url = $server . 'dukcapil/get_json/BPS/CALL_VERIFY_BY_ELEMEN';
