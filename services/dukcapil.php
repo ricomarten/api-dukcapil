@@ -34,7 +34,7 @@ $json = file_get_contents('php://input');
 // Decode json tersebut agar mudah mengambil nilainya
 $input = json_decode($json);
 print_r($input);
-if (!isset($input->NIK)) {
+if (!isset($input->NIK) || ($input->NIK=='')) {
   http_response_code(400);
   exit();
 }
