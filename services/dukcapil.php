@@ -34,6 +34,10 @@ $json = file_get_contents('php://input');
 // Decode json tersebut agar mudah mengambil nilainya
 $input = json_decode($json);
 print_r($input);
+if (!isset($input->NIK)) {
+  http_response_code(400);
+  exit();
+}
 try {
   JWT::decode($token, new Key($_ENV['ACCESS_TOKEN_SECRET'], 'HS256'));
 
