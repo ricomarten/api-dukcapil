@@ -1,5 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
+$server= "https://10.10.100.16:8000/";
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -61,7 +62,7 @@ try {
     "NO_RW" => "4"
   );
 
-  $url = 'https://10.10.100.16:8000/dukcapil/get_json/BPS/CALL_VERIFY_BY_ELEMEN';
+  $url = $server.'dukcapil/get_json/BPS/CALL_VERIFY_BY_ELEMEN';
   $options = array(
     'http' => array(
       'header'  => "Content-type: application/json,Accept: application/json\r\n",
