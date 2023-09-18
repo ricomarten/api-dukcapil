@@ -7,6 +7,7 @@ use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
+
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -21,15 +22,20 @@ if (!isset($headers['Authorization'])) {
 }
 
 list(, $token) = explode(' ', $headers['Authorization']);
-
+function ekstrak_nilai($string)
+{
+  $nilai_all = explode("(", $string);
+  $nilai = str_replace(")", "", $nilai_all[1]);
+  return $nilai;
+}
+// Ambil JSON yang dikirim oleh user
+$json = file_get_contents('php://input');
+// Decode json tersebut agar mudah mengambil nilainya
+$input = json_decode($json);
+print_r($input);
 try {
   JWT::decode($token, new Key($_ENV['ACCESS_TOKEN_SECRET'], 'HS256'));
-  function ekstrak_nilai($string)
-  {
-    $nilai_all = explode("(", $string);
-    $nilai = str_replace(")", "", $nilai_all[1]);
-    return $nilai;
-  }
+
   $data_arr = array(
     "USER_ID" => "10022023100243BPS4484",
     "PASSWORD" => "7YWP65",
