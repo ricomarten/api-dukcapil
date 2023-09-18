@@ -36,7 +36,7 @@ $input = json_decode($json);
 //print_r($input);
 if (!isset($input->NIK) || ($input->NIK == '')) {
   http_response_code(400);
-  echo ("NIK Tidak Boleh Kosong");
+  echo json_encode("NIK Tidak Boleh Kosong");
   exit();
 }
 try {
@@ -96,7 +96,6 @@ try {
 
     //echo ekstrak_nilai($content['NAMA_LGKP']);
   }
-  echo $status;
   //echo json_encode($games);
 } catch (Exception $e) {
   http_response_code(401);
