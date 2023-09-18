@@ -92,10 +92,8 @@ try {
   } else {
     // "Key does not exist!";
     $status = "NIK Sesuai";
-
     //echo ekstrak_nilai($content['NAMA_LGKP']);
   }
-  //echo json_encode($games);
 } catch (Exception $e) {
   http_response_code(401);
   exit();
