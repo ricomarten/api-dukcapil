@@ -54,7 +54,8 @@ $data_arr= array(
 $options2 = array(
   'http' => array(
     //'header' => "Content-type: application/json,Accept: application/json\r\n",
-    'header' => "Authorization: Bearer " . $token,
+    'header' => "Content-Type: application/json,Accept: application/json\r\n".
+                "Authorization: Bearer " . $token,
     'method' => 'POST',
     'content' => json_encode($data_arr),
   ),
