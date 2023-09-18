@@ -1,6 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
-$server= "https://10.10.100.16:8000/";
+$server = "https://10.10.100.16:8000/";
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -34,40 +34,40 @@ $json = file_get_contents('php://input');
 // Decode json tersebut agar mudah mengambil nilainya
 $input = json_decode($json);
 //print_r($input);
-if (!isset($input->NIK) || ($input->NIK=='')) {
+if (!isset($input->NIK) || ($input->NIK == '')) {
   http_response_code(400);
-  echo("NIK Tidak Boleh Kosong");
+  echo ("NIK Tidak Boleh Kosong");
   exit();
 }
 try {
   JWT::decode($token, new Key($_ENV['ACCESS_TOKEN_SECRET'], 'HS256'));
 
   $data_arr = array(
-    "USER_ID" => "10022023100243BPS4484",
-    "PASSWORD" => "7YWP65",
-    "IP_USER" => "10.200.130.3",
-    "TRESHOLD" => "80",
-    "NIK" => "3372041003870006",
-    "NO_KK" => "3372042605140004",
-    "NAMA_LGKP" => "Paijo",
-    "TMPT_LHR" => "Surakarta",
-    "TGL_LHR" => "10-03-1987",
-    "JENIS_KLMIN" => "Laki-laki",
-    "JENIS_PKRJN" => "Pegawai Negri Sipil",
-    "KAB_NAME" => "Surakarta",
-    "NO_KEC" => "040",
-    "KEC_NAME" => "Jebres",
-    "NO_KAB" => "072",
-    "PROP_NAME" => "Jawa Tengah",
-    "NO_KEL" => "23",
-    "NO_PROP" => "33",
-    "KEL_NAME" => "Mojosongo",
-    "ALAMAT" => "Perum Puncak Solo ",
-    "NO_RT" => "5",
-    "NO_RW" => "4"
+    "USER_ID"   => "10022023100243BPS4484",
+    "PASSWORD"  => "7YWP65",
+    "IP_USER"   => "10.200.130.3",
+    "TRESHOLD"  => $input->TRESHOLD,
+    "NIK"       => $input->NIK,
+    "NO_KK"     => $input->NO_KK,
+    "NAMA_LGKP" => $input->NAMA_LGKP,
+    "TMPT_LHR"  => $input->TMPT_LHR,
+    "TGL_LHR"   => $input->TGL_LHR,
+    "JENIS_KLMIN" => $input->JENIS_KLMIN,
+    "JENIS_PKRJN" => $input->JENIS_PKRJN,
+    "NO_PROP"   => $input->NO_PROP,
+    "PROP_NAME" => $input->PROP_NAME,
+    "NO_KAB"    => $input->NO_KAB,
+    "KAB_NAME"  => $input->KAB_NAME,
+    "NO_KEC"    => $input->NO_KEC,
+    "KEC_NAME"  => $input->KEC_NAME,   
+    "NO_KEL"    => $input->NO_KEL,
+    "KEL_NAME"  => $input->KEL_NAME,
+    "ALAMAT"    => $input->ALAMAT,
+    "NO_RT"     => $input->NIK,
+    "NO_RW"     => $input->NIK
   );
 
-  $url = $server.'dukcapil/get_json/BPS/CALL_VERIFY_BY_ELEMEN';
+  $url = $server . 'dukcapil/get_json/BPS/CALL_VERIFY_BY_ELEMEN';
   $options = array(
     'http' => array(
       'header'  => "Content-type: application/json,Accept: application/json\r\n",
