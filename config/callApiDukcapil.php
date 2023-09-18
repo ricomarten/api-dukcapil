@@ -29,6 +29,7 @@ $hasil = json_decode($result);
 
 $token=$hasil->accessToken;
 $url2 = 'http://localhost/api-dukcapil/services/dukcapil.php';
+
 $data_arr= array(
   "TRESHOLD"=> "80",
   "NIK"=> "3372041003870006",
@@ -52,7 +53,7 @@ $data_arr= array(
 );
 $options2 = array(
   'http' => array(
-    //'header' => "Content-type: application/json,Accept: application/json\r\n",
+    'header' => "Content-type: application/json,Accept: application/json\r\n",
     'header' => "Authorization: Bearer " . $token,
     'method' => 'POST',
     'content' => json_encode($data_arr),
