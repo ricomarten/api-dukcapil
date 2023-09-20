@@ -31,7 +31,29 @@
             </div>
           </div>
           <div class="card-body">
-            Start creating your amazing application!
+              <form id="form" method="post">
+                  <div class="form-group">
+                    <label>Username</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Username@domainemail">
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-id-card"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-key"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
           </div>
         </div>
         <div class="card">
