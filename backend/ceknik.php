@@ -72,6 +72,6 @@ $context2  = stream_context_create($options2);
 $result2 = file_get_contents($url2, false, $context2);
 $hasil2 = json_decode($result2);
 
-echo json_encode($hasil2);
+print_r($result2);
 // }
 ?>
